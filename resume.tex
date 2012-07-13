@@ -1,0 +1,302 @@
+% Resume for Paul Kilgo
+
+\documentclass[11pt]{simplecv} 
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{pslatex}
+\usepackage[numbers]{natbib}
+
+\setlength{\headheight}{12pt} % allow room for 2-line header
+\setlength{\headsep}{12pt}  % space between header and text
+
+% Some semantic macros
+\newcommand{\stitle}{\textbf}
+\newcommand{\sdate}{\textit}
+\newcommand{\splace}{\textit}
+\newcommand{\email}{\texttt}
+
+%% NO MORE BIBLIOGRAPHY LABELS.
+\makeatletter
+\def\@biblabel#1{\textbullet \hspace{0.25em}}
+\makeatother
+
+%% Rename "References" to "Publications"
+\renewcommand{\bibsection}{\section{Publications}}
+
+%% Inputs provided file only if it exists. Otherwise, put some placeholder
+%  text.
+\newcommand{\inputifexists}[2]{
+  \IfFileExists{#1}{\input{#1}}{#2}
+}
+
+% Flag for CV mode
+\newif\ifcv
+
+%% Comment out for SUPER BRIEF RESUME ACTION.
+\cvtrue
+
+\pagestyle{fancy}     % set pagestyle for document
+
+%% Name in top-right corner. IF CV: also the page number.
+\rhead{
+  \textit{P. Kilgo}
+  \ifcv
+    \\ \textit{p. \thepage} 
+  \fi
+}
+
+%% NO FOOTERS!
+\cfoot{}
+
+\topmargin=-0.5in % start text higher on the page
+
+% Let's have a special URL style, shall we?
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+
+\urlstyle{leo}
+
+\begin{document}
+\thispagestyle{empty} % this page has no header  
+
+
+\leftheader{
+  \inputifexists{inc/address.tex}
+}
+
+\rightheader{
+  \inputifexists{inc/contact.tex}{}
+}
+
+\title{Paul M. Kilgo}
+
+\maketitle
+
+\begin{center}
+  \email{paulkilgo@gmail.com}
+\end{center}
+
+%% Objective section if one is defined.
+\IfFileExists{inc/objective.tex}
+  {
+    \section{Objective}
+    \input{inc/objective.tex}
+  }
+  {}
+
+%To obtain the New Grad Software Engineer position with Google Inc.
+
+%%%%%%%%%%%%%%%%%%%%
+% SECTION: Academics
+%%%%%%%%%%%%%%%%%%%%
+\section{Academics} 
+
+\begin{topic}
+
+\item[Aug 2012] {
+  \stitle{Master of Science}, Computer Science \\
+  The University of Alabama, Tuscaloosa, AL \\
+}
+
+\item[May 2011] {
+  \stitle{Bachelor of Science}, Computer Science, Mathematics \\
+  The University of Alabama, Tuscaloosa, AL \hspace{0.2in} GPA 3.815
+}
+
+\end{topic}
+  
+%%%%%%%%%%%%%%%%%%%%
+% SECTION: Work Experience
+%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience} 
+
+\begin{topic}
+
+\item[Aug 2011--current] {
+  \stitle{Graduate Teaching Assistant} \\
+  \splace{Computer Science Department} \\
+  The University of Alabama, Tuscaloosa, AL
+
+\ifcv
+  \begin{itemize}
+    \item Lectured and graded for undergraduate data structures/algorithms course.
+    \item Graded for undergraduate/graduate algorithms course.
+    \item Lectured and graded for Programming II course.
+  \end{itemize}
+\fi
+}
+
+\item[Summer 2010] {
+	\stitle{Student Volunteer} \\
+	\splace{The Good Samaritan Clinic} \\
+	Northport, AL
+
+\ifcv
+	\begin{itemize}
+		\item Performed triage procedures for incoming patients.
+	\end{itemize}
+\fi
+}
+
+\item [Fall 2009] {
+	\stitle{Project-Based Intern} \\
+	\splace{Creative Campus} \\
+	The University of Alabama, Tuscaloosa, AL
+	
+\ifcv
+	\begin{itemize}
+		\item Organized weeklong game development workshop.
+	\end{itemize}
+\fi
+}
+
+
+\item[Summer 2008] {  
+  \stitle{Programmer, Researcher, DBA} \\
+  \splace{Kilgo Headache Clinic} \\
+  Northport, AL
+
+\ifcv
+  \begin{itemize}
+    \item Managed MySQL database for research data.
+    \item Created Java-based data entry client.
+    \item Performed data entry.
+  \end{itemize}
+\fi
+}
+
+\item[Aug 2007--Aug 2011] {
+  \stitle{Student IT Assistant} \\
+  \splace{Center for Materials for Information Technology} \\
+  The University of Alabama, Tuscaloosa, AL
+
+\ifcv
+  \begin{itemize}
+    \item Managed Linux-based services.
+    \item Created software solutions for IT problems.
+    \item Improved many processes.
+  \end{itemize}
+\fi
+}
+
+\item[Summer 2007] {
+  \stitle{Student Research Assistant} \\
+  \splace{Center for Materials for Information Technology}  \\
+  The University of Alabama, Tuscaloosa, AL
+
+\ifcv
+  \begin{itemize}
+    \item Conducted research in magnetics.
+    \item Created equipment documentation project.
+  \end{itemize}
+\fi
+}
+
+\item[Summer 2006] {
+	\stitle{Web Designer} \\
+	\splace{Neurology Clinic, P.C.} \\
+	Northport, AL
+}
+
+\ifcv
+	\item[Summer 2004] {
+		\stitle{Intern} \\
+		\splace{Tuscom Computer Solutions} \\
+		Tuscaloosa, AL
+	}
+\fi
+
+\end{topic}
+
+
+\section{Skills}
+
+\begin{topic}
+
+\item[Expert level] {
+  Java, C++, C, Python, Shell scripting
+}
+
+\item[Competent level] {
+  C\#, PHP
+}
+
+\item[Development frameworks and platforms] {
+  Linux, Windows, Android, J2ME, OpenGL, XNA, SDL
+}
+
+\end{topic}
+
+%% This section is rather lengthy, so we leave it for the CV.
+\ifcv
+  \section{Academic and OSS Projects} 
+
+  \begin{topic}
+
+  \item [Rainwave] {
+    Created an Android client for Rainwave, an online radio station where users can vote for, request, and
+    rate the music which plays. Also, conducted a user study on the client for a Human-Computer Interaction
+    course to measure improvements made to the interface.
+    
+    \url{http://github.com/OEP/rainwave-android}  \\
+    \url{http://rainwave.cc/}
+  }
+
+  \item [Bamalab] {
+    Recreated the Bamalab software using F/OSS technologies. Bamalab is a software package created
+    by a UA professor used to teach circuits to freshmen.
+    
+    \url{http://bamalab.googlecode.com}
+  }
+
+  \item [Bama Mobile Registration for Android] {
+    Software engineering class project -- a prototype for an Android class registration system for
+    the University.
+    
+    \url{http://bmr-android.googlecode.com/}
+  }
+
+  \item[JMingle] {
+    A social game for J2ME. Nearby Bluetooth devices are represented as NPC's which the
+    player can interact with.
+    
+    \url{http://jmingle.googlecode.com/}
+  }
+
+  \end{topic}
+\fi
+
+
+\section{Memberships} 
+
+\begin{topic}
+
+\item[2009--current] {
+  UA Student Chapter of the Association for Computing Machinery
+  
+  Served as publicity chair and webmaster for a year.
+}
+
+\end{topic}
+
+
+\section{Academic Honors} 
+\begin{topic}
+  \item [2012] { ACM Outstanding Graduate Student, The University of Alabama }
+  \item [2010] { ACM Outstanding Undergraduate, The University of Alabama }
+  \item [2009] { \textit{Upsilon Pi Epsilon} National Honor Society }
+  \item [2009] { Outstanding Junior in Computer Science, The University of Alabama }
+\end{topic}
+
+
+%% Prints the bibliography
+\nocite{rdis-icra2012}
+\nocite{rdis-acmse2012}
+\nocite{rdis-dslrob11}
+\bibliographystyle{plainyr-rev}
+\bibliography{personal}
+
+\end{document}
