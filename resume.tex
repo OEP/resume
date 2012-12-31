@@ -32,9 +32,11 @@
 
 % Flag for CV mode
 \newif\ifcv
+\newif\ifmetadata
 
 %% Comment out for SUPER BRIEF RESUME ACTION.
 \cvtrue
+\metadatatrue
 
 \pagestyle{fancy}     % set pagestyle for document
 
@@ -46,8 +48,7 @@
   \fi
 }
 
-%% NO FOOTERS!
-\cfoot{}
+\cfoot{\ifmetadata Last update: \today \fi}
 
 \topmargin=-0.5in % start text higher on the page
 
@@ -115,13 +116,26 @@
 
 \begin{topic}
 
-\item[Aug 2011--current] {
-  \stitle{Graduate Teaching Assistant} \\
+\item[Aug 2012--present] {
+  \stitle{Graduate Assistant} \\
+  \splace{School of Computing} \\
+  Clemson University, Clemson, SC
+
+\ifcv
+  \begin{itemize}
+    \item Led lab and graded for an intermediate programming course.
+  \end{itemize}
+\fi
+}
+
+\item[Aug 2011--Jun 2012] {
+  \stitle{Graduate Assistant} \\
   \splace{Computer Science Department} \\
   The University of Alabama, Tuscaloosa, AL
 
 \ifcv
   \begin{itemize}
+    \item Research in robotics software/middleware
     \item Lectured and graded for undergraduate data structures/algorithms course.
     \item Graded for undergraduate/graduate algorithms course.
     \item Lectured and graded for Programming II course.
@@ -293,10 +307,8 @@
 
 
 %% Prints the bibliography
-\nocite{rdis-icra2012}
-\nocite{rdis-acmse2012}
-\nocite{rdis-dslrob11}
+\nocite{*}
 \bibliographystyle{plainyr-rev}
-\bibliography{personal}
+\bibliography{cv}
 
 \end{document}
