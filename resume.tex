@@ -32,11 +32,13 @@
 
 % Flag for CV mode
 \newif\ifcv
+\newif\ifprojects
 \newif\ifmetadata
 
 %% Comment out for SUPER BRIEF RESUME ACTION.
 \cvtrue
 \metadatatrue
+%\projectstrue
 
 \pagestyle{fancy}     % set pagestyle for document
 
@@ -77,7 +79,7 @@
 \maketitle
 
 \begin{center}
-  \email{paulkilgo@gmail.com}
+  \email{pkilgo@clemson.edu}
 \end{center}
 
 %% Objective section if one is defined.
@@ -123,6 +125,7 @@
 
 \ifcv
   \begin{itemize}
+    \item Maintained and developed software for School of Computing Linux systems
     \item Led lab and graded for an intermediate programming course.
   \end{itemize}
 \fi
@@ -230,23 +233,23 @@
 
 \begin{topic}
 
-\item[Expert level] {
-  Java, C++, C, Python, Shell scripting
+\item[Proficiency] {
+  Java, C++, Python, Shell scripting
 }
 
-\item[Competent level] {
-  C\#, PHP
+\item[Familiarity] {
+  C, C\#, PHP
 }
 
 \item[Development frameworks and platforms] {
-  Linux, Windows, Android, J2ME, OpenGL, XNA, SDL
+  Linux, Windows, Android, OpenGL, SDL
 }
 
 \end{topic}
 
-%% This section is rather lengthy, so we leave it for the CV.
-\ifcv
-  \section{Academic and OSS Projects} 
+%% This section may be interesting for work-related purposes but maybe 
+\ifprojects
+  \section{Projects} 
 
   \begin{topic}
 
@@ -288,7 +291,7 @@
 
 \begin{topic}
 
-\item[2009--current] {
+\item[2009--2012] {
   UA Student Chapter of the Association for Computing Machinery
   
   Served as publicity chair and webmaster for a year.
