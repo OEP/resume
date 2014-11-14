@@ -1,6 +1,8 @@
-LATEXMK = latexmk
+TEX = pdflatex
+TEXFLAGS = -halt-on-error
 
-LATEXMAIN = resume.tex
+all: resume.pdf
 
-all:
-	$(LATEXMK) -pdf $(LATEXMAIN)
+%.pdf: %.tex
+	$(TEX) $(TEXFLAGS) $<
+	$(TEX) $(TEXFLAGS) $<
