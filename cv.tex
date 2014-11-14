@@ -1,11 +1,17 @@
-\documentclass[12pt]{memoir}
+\documentclass[12pt,oldfontcommands]{memoir}
 \usepackage{cv}
 
 \title{Paul Kilgo}
 \date{}
 
+% Footer content
+\cfoot{pkilgo@clemson.edu}
+\lfoot{Paul Kilgo}
+\rfoot{205.210.9536}
+
 \begin{document}
 \maketitle
+\thispagestyle{fancy}
 
 \section*{Academics}
 
@@ -102,8 +108,9 @@ Department, 2011--2012.
 Graduate Lab Assistant, Clemson University School of Computing, 2013--present.
 
 \begin{itemize}
-  \item Assisted systems programmers in the management of 100+ Linux desktops (open lab
-        and research lab) and servers using Puppet and related technologies.
+  \item Assisted Systems Programmers in the management of 100+ Linux desktops
+        (open lab and research lab) and servers using Puppet and related
+        technologies.
   \item Led development for a Django application for arbitrary resource
         management, including VCS repositories and databases (about 100
         registered users). Contributed to several underlying open-source
@@ -111,7 +118,10 @@ Graduate Lab Assistant, Clemson University School of Computing, 2013--present.
         management.
   \item Contributed to Django application for Mercurial-based homework and lab
         submissions (1500+ registered users, 35000+ repositories).
+  \item Built custom Debian packages, set up custom Apt repositories, and
+        managed a Jenkins instance for local development.
 \end{itemize}
+
 
 Student Assistant, The University of Alabama Center for Materials for
 Information Science, 2007--2011.
