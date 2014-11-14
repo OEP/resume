@@ -1,0 +1,28 @@
+\ProvidesPackage{cv}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{enumitem}
+
+% Adjust position of title and set bold face.
+\setlength{\droptitle}{-2cm}
+\pretitle{\begin{center}\large\textbf}
+\posttitle{\end{center}}
+
+% Author and date aren't used.
+\preauthor{} \postauthor{}
+\predate{} \postdate{}
+
+% Globally unindent itemize environments.
+\setlist[itemize]{leftmargin=7mm,itemsep=0ex}
+
+% Remove paragraph indentation and set spacing between paragraphs.
+\setlength{\parindent}{0pt}
+
+% Use 
+%\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+\renewcommand{\bibsection}{\section*{Publications}}
+
+% No decoration for bibligraphy entries.
+\makeatletter
+\def\@biblabel#1{}
+\makeatother
