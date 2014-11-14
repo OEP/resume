@@ -2,6 +2,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{titling}
 \usepackage{enumitem}
+\usepackage{titlesec}
 
 % Adjust position of title and set bold face.
 \setlength{\droptitle}{-2cm}
@@ -18,9 +19,12 @@
 % Remove paragraph indentation and set spacing between paragraphs.
 \setlength{\parindent}{0pt}
 
-% Use 
-%\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+% Use section* over chapter*; change "Bibliography" to "Publications"
 \renewcommand{\bibsection}{\section*{Publications}}
+
+% Horizontal rule underneath the section titles.
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 
 % No decoration for bibligraphy entries.
 \makeatletter
