@@ -11,3 +11,7 @@ all: resume.pdf cv.pdf
 	sed -i -e 's/Paul.Michael Kilgo/\\textbf{Paul Michael Kilgo}/g' $(<:.tex=.bbl)
 	$(TEX) $(TEXFLAGS) $<
 	$(TEX) $(TEXFLAGS) $<
+
+cv.pdf: cv.sty
+resume.pdf: resume.tex resume.sty
+	$(TEX) $(TEXFLAGS) $<

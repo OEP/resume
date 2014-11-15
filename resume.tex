@@ -1,345 +1,101 @@
-% Resume for Paul Kilgo
+\documentclass[11pt]{moderncv}
+\usepackage{resume}
 
-\documentclass[11pt]{simplecv} 
-\usepackage{fancyhdr}
-\usepackage{url}
-\usepackage{fullpage}
-\usepackage{pslatex}
-\usepackage[numbers]{natbib}
-
-\setlength{\headheight}{12pt} % allow room for 2-line header
-\setlength{\headsep}{12pt}  % space between header and text
-
-% Some semantic macros
-\newcommand{\stitle}{\textbf}
-\newcommand{\sdate}{\textit}
-\newcommand{\splace}{\textit}
-\newcommand{\email}{\texttt}
-
-%% NO MORE BIBLIOGRAPHY LABELS.
-\makeatletter
-\def\@biblabel#1{\textbullet \hspace{0.25em}}
-\makeatother
-
-%% Rename "References" to "Publications"
-\renewcommand{\bibsection}{
-  \section{Publications}
-}
-
-%% Inputs provided file only if it exists. Otherwise, put some placeholder
-%  text.
-\newcommand{\inputifexists}[2]{
-  \IfFileExists{#1}{\input{#1}}{#2}
-}
-
-% Flag for CV mode
-\newif\ifcv
-\newif\ifprojects
-\newif\ifmetadata
-
-%% Comment out for SUPER BRIEF RESUME ACTION.
-\cvtrue
-\metadatatrue
-%\projectstrue
-
-\pagestyle{fancy}     % set pagestyle for document
-
-%% Name in top-right corner. IF CV: also the page number.
-\rhead{
-  \textit{P. Kilgo}
-  \ifcv
-    \\ \textit{p. \thepage} 
-  \fi
-}
-
-\cfoot{\ifmetadata Last update: \today \fi}
-
-\topmargin=-0.5in % start text higher on the page
-
-% Let's have a special URL style, shall we?
-\makeatletter
-\def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
-\makeatother
-
-\urlstyle{leo}
+\name{Paul}{Kilgo}
+\homepage{people.cs.clemson.edu/\textasciitilde pkilgo}
+\phone[mobile]{205.210.9536}
+\social[github]{OEP}
 
 \begin{document}
-\thispagestyle{empty} % this page has no header  
 
+\makecvtitle
 
-\leftheader{
-  \inputifexists{inc/address.tex}
+\section{Academics}
+
+\cventry{2012--present}{Ph.D. in Computer Science}{Clemson University}{}{}{}
+\cventry{2012}{M.S. in Computer Science}{The University of Alabama}{}{}{}
+\cventry{2011}{B.S. in Computer Science and Mathematics}{
+  The University of Alabama
+}{}{}{}
+
+\section{Thesis}
+\cvitem{Title}{RDIS: A domain model for generalizing the mappings between
+               robotic software frameworks and robotic devices}
+\cvitem{Advisor}{Monica Anderson, Ph.D.}
+
+\section{Experience}
+
+\subsection{Research}
+\cventry{2014--present}{Dissertation Research}{Clemson University}{Clemson, SC}{}{
+  Investigated and developed algorithms for numeric computation of Feynman path
+  integrals for a radiative transport problem.
 }
 
-\rightheader{
-  \inputifexists{inc/contact.tex}{}
+\cventry{2013}{Directed Projects}{Clemson University}{Clemson, SC}{}{
+  Developed plug-in for Blender for node-based volume modeling, grid
+  computation, and volume rendering.
 }
 
-\title{Paul M. Kilgo}
-
-\maketitle
-
-\begin{center}
-  \email{pkilgo@clemson.edu}
-\end{center}
-
-%% Objective section if one is defined.
-\IfFileExists{inc/objective.tex}
-  {
-    \section{Objective}
-    \input{inc/objective.tex}
-  }
-  {}
-
-%%%%%%%%%%%%%%%%%%%%
-% SECTION: Academics
-%%%%%%%%%%%%%%%%%%%%
-\section{Academics} 
-
-\begin{topic}
-
-\item[2012--Present] {
-  \stitle{Doctor of Philosophy}, Computer Science \\
-  Clemson University, Clemson, SC \\
-  Advisor: Jerry Tessendorf, Ph.D. \\
+\cventry{Summer 2012}{Graduate Research Assistant}
+        {The University of Alabama}{Tuscaloosa, AL}{}{
+  Developed and implemented a domain model and visual modeling language for the
+  automatic generation of drivers for robotic devices.
 }
 
-\item[Aug 2012] {
-  \stitle{Master of Science}, Computer Science \\
-  Thesis: ``RDIS: A Domain Model for Generalizing the Mappings Between Robotic Software Frameworks and Robotic Devices'' \\
-  The University of Alabama, Tuscaloosa, AL \\
-  Advisor: Monica Anderson, Ph.D. \\
+\cventry{Summer 2008}{Research Assistant}{Kilgo Headache Clinic}
+        {Northport, AL}{}{}
+
+\cventry{Summer 2007}{Undergraduate Research Assistant}
+        {Center for Materials for Information Technology}{Tuscaloosa, AL}{}{}
+
+\subsection{Teaching}
+
+\cventry{2012}{Graduate Teaching Assistant}{Clemson University}
+        {Clemson, SC}{}{
+  Co-led labs and graded for CP SC 215: Software Development Foundations.
 }
 
-\item[May 2011] {
-  \stitle{Bachelor of Science}, Computer Science, Mathematics \\
-  The University of Alabama, Tuscaloosa, AL \hspace{0.2in} GPA 3.815
+\cventry{2011--2012}{Graduate Teaching Assistant}{The University of Alabama}
+        {Tuscaloosa, AL}{}{
+  Led recitation for CS 360: Data Structures and Algorithm Analysis. Graded
+  homework for CS 470 and CS 570: Introduction to Computer Algorithms. Lectured
+  and graded for CS 250: Programming II.
 }
 
-\end{topic}
-  
-%%%%%%%%%%%%%%%%%%%%
-% SECTION: Work Experience
-%%%%%%%%%%%%%%%%%%%%
-\section{Work Experience} 
+\subsection{Professional}
 
-\begin{topic}
-
-\item[Aug 2012--present] {
-  \stitle{Graduate Assistant} \\
-  \splace{School of Computing} \\
-  Clemson University, Clemson, SC
-
-\ifcv
-  \begin{itemize}
-    \item Maintained and developed software for School of Computing Linux systems
-    \item Led lab and graded for an intermediate programming course.
-  \end{itemize}
-\fi
+\cventry{2013--present}{Graduate Lab Assistant}{Clemson University}
+        {Clemson, SC}{}{
+  Locally supported Linux-based desktops and servers. Led development software
+  for automatic resource allocation. Contributed to several other development
+  projects.
 }
 
-\item[Aug 2011--Jun 2012] {
-  \stitle{Graduate Assistant} \\
-  \splace{Computer Science Department} \\
-  The University of Alabama, Tuscaloosa, AL
-
-\ifcv
-  \begin{itemize}
-    \item Research in robotics software/middleware
-    \item Lectured and graded for undergraduate data structures/algorithms course.
-    \item Graded for undergraduate/graduate algorithms course.
-    \item Lectured and graded for Programming II course.
-  \end{itemize}
-\fi
+\cventry{2007--2011}{Student Assistant}{The University of Alabama}
+        {Clemson, SC}{}{
+  Locally supported Windows desktops. Initiated and managed several Linux-based
+  services.
 }
 
-\item[Summer 2010] {
-	\stitle{Student Volunteer} \\
-	\splace{The Good Samaritan Clinic} \\
-	Northport, AL
+\section{Honors and Awards}
+\cventry{2013}{Upsilon Pi Epsilon National Honor Society}{Clemson University}{}{}{}
+\cventry{2012}{ACM Outstanding Graduate Student}{The University of Alabama}{}{}{}
+\cventry{2007--2011}{University Honors Program}{The University of Alabama}{}{}{}
+\cventry{2010}{ACM Outstanding Undergraduate}{The University of Alabama}{}{}{}
+\cventry{2009}{Upsilon Pi Epsilon National Honor Society}{The University of Alabama}{}{}{}
+\cventry{2009}{Outstanding Junior in Computer Science}{The University of Alabama}{}{}{}
 
-\ifcv
-	\begin{itemize}
-		\item Performed triage procedures for incoming patients.
-	\end{itemize}
-\fi
-}
-
-\item [Fall 2009] {
-	\stitle{Project-Based Intern} \\
-	\splace{Creative Campus} \\
-	The University of Alabama, Tuscaloosa, AL
-	
-\ifcv
-	\begin{itemize}
-		\item Organized weeklong game development workshop.
-	\end{itemize}
-\fi
-}
-
-
-\item[Summer 2008] {  
-  \stitle{Programmer, Researcher, DBA} \\
-  \splace{Kilgo Headache Clinic} \\
-  Northport, AL
-
-\ifcv
-  \begin{itemize}
-    \item Managed MySQL database for research data.
-    \item Created Java-based data entry client.
-    \item Performed data entry.
-  \end{itemize}
-\fi
-}
-
-\item[Aug 2007--Aug 2011] {
-  \stitle{Student IT Assistant} \\
-  \splace{Center for Materials for Information Technology} \\
-  The University of Alabama, Tuscaloosa, AL
-
-\ifcv
-  \begin{itemize}
-    \item Managed Linux-based services.
-    \item Created software solutions for IT problems.
-    \item Improved many processes.
-  \end{itemize}
-\fi
-}
-
-\item[Summer 2007] {
-  \stitle{Student Research Assistant} \\
-  \splace{Center for Materials for Information Technology}  \\
-  The University of Alabama, Tuscaloosa, AL
-
-\ifcv
-  \begin{itemize}
-    \item Conducted research in magnetics.
-    \item Created equipment documentation project.
-  \end{itemize}
-\fi
-}
-
-\item[Summer 2006] {
-	\stitle{Web Designer} \\
-	\splace{Neurology Clinic, P.C.} \\
-	Northport, AL
-}
-
-\ifcv
-	\item[Summer 2004] {
-		\stitle{Intern} \\
-		\splace{Tuscom Computer Solutions} \\
-		Tuscaloosa, AL
-	}
-\fi
-
-\end{topic}
-
+\section{Membership and Service}
+\cventry{2014}{Reviewer}{Clemson Graduate School Professional Enrichment Grant}{}{}{}
+\cventry{2013}{Reviewer}{Journal of Software Engineering for Robotics}{}{}{}
+\cventry{2012}{Reviewer}{IEEE/RSJ International Conference on Intelligent Robots and Systems}{}{}{}
+\cventry{2011--2012}{Publicity Chair}{The University of Alabama Student Chapter of the Association for Computing Machinery}{}{}{}
+\cventry{2009--2012}{Member}{The University of Alabama Student Chapter of the Association for Computing Machinery}{}{}{}
+\cventry{Summer 2010}{Volunteer}{The Good Samaritan Clinic}{}{}{}
 
 \section{Skills}
-
-\begin{topic}
-
-\item[Proficiency] {
-  Java, C++, Python, Shell scripting
-}
-
-\item[Familiarity] {
-  C, C\#, PHP
-}
-
-\item[Development frameworks and platforms] {
-  Linux, Windows, Android, OpenGL, SDL
-}
-
-\end{topic}
-
-%% This section may be interesting for work-related purposes but maybe 
-\ifprojects
-  \section{Projects} 
-
-  \begin{topic}
-
-  \item [Rainwave] {
-    Created an Android client for Rainwave, an online radio station where users can vote for, request, and
-    rate the music which plays. Also, conducted a user study on the client for a Human-Computer Interaction
-    course to measure improvements made to the interface.
-    
-    \url{http://github.com/OEP/rainwave-android}  \\
-    \url{http://rainwave.cc/}
-  }
-
-  \item [Bamalab] {
-    Recreated the Bamalab software using F/OSS technologies. Bamalab is a software package created
-    by a UA professor used to teach circuits to freshmen.
-    
-    \url{http://bamalab.googlecode.com}
-  }
-
-  \item [Bama Mobile Registration for Android] {
-    Software engineering class project -- a prototype for an Android class registration system for
-    the University.
-    
-    \url{http://bmr-android.googlecode.com/}
-  }
-
-  \item[JMingle] {
-    A social game for J2ME. Nearby Bluetooth devices are represented as NPC's which the
-    player can interact with.
-    
-    \url{http://jmingle.googlecode.com/}
-  }
-
-  \end{topic}
-\fi
-
-
-\section{Memberships} 
-
-\begin{topic}
-
-\item[2009--2012] {
-  UA Student Chapter of the Association for Computing Machinery
-  
-  Served as publicity chair and webmaster for a year.
-}
-
-\end{topic}
-
-\section{Academic Honors} 
-\begin{topic}
-  \item [2012] { ACM Outstanding Graduate Student, The University of Alabama }
-  \item [2010] { ACM Outstanding Undergraduate, The University of Alabama }
-  \item [2009] { \textit{Upsilon Pi Epsilon} National Honor Society }
-  \item [2009] { Outstanding Junior in Computer Science, The University of Alabama }
-\end{topic}
-
-\section{Conferences}
-\begin{topic}
-  \item [2012] { 
-    \textit{Presented},
-    IEEE International Conference on Robotics and Automation (ICRA)
-  }
-  \item [2012] { 
-    \textit{Presented},
-    Association for Computing Machinery Southeastern Conference (ACMSE)
-  }
-\end{topic}
-
-\section{Peer Review}
-\begin{topic}
-  \item [2013] { 
-    Journal of Software Engineering for Robotics (JOSER)
-  }
-  \item [2012] { 
-    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
-  }
-\end{topic}
-
-%% Prints the bibliography
-\nocite{*}
-\bibliographystyle{plainyr-rev}
-\bibliography{cv}
+\cvitemwithcomment{Programming Languages}{Python, C++, C, Shell, Java, PHP}{}
+\cvitemwithcomment{Platforms}{GNU/Linux, Android}{}
+\cvitemwithcomment{Frameworks}{Django}{}
 
 \end{document}
