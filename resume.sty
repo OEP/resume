@@ -1,9 +1,13 @@
 \ProvidesPackage{resume}
 
 \usepackage[margin=2cm]{geometry}
+\usepackage{lastpage}
 
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
 % Make the name text not so big.
 \renewcommand*{\namefont}{\fontsize{18}{40}\mdseries\upshape}
+
+\pagestyle{fancy}
+\rfoot{\thepage/\pageref{LastPage}}

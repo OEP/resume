@@ -15,3 +15,4 @@ all: resume.pdf cv.pdf
 cv.pdf: cv.sty cv.bib
 resume.pdf: resume.tex resume.sty
 	$(TEX) $(TEXFLAGS) $<
+	$(TEX) $(TEXFLAGS) $<
