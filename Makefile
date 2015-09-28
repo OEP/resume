@@ -12,7 +12,7 @@ all: resume.pdf cv.pdf
 	$(TEX) $(TEXFLAGS) $<
 	$(TEX) $(TEXFLAGS) $<
 
-cv.pdf: cv.sty cv.bib
+cv.pdf: cv.sty cv.bib cv.tex $(wildcard cv/*.tex)
 resume.pdf: resume.tex resume.sty
 	$(TEX) $(TEXFLAGS) $<
 	$(TEX) $(TEXFLAGS) $<
