@@ -8,7 +8,7 @@
 
 % remove the page numbers if it is just one page
 \ifonepage
-\nopagenumbers
+\rfoot{}
 \fi
 
 \name{Paul}{Kilgo}
@@ -96,6 +96,9 @@
 }
 
 
+\ifonepage
+%
+\else
 \subsection{Teaching}
 
 \cventry{2012}{Graduate Teaching Assistant}{Clemson University}
@@ -109,6 +112,13 @@
   %homework for CS 470 and CS 570: Introduction to Computer Algorithms. Lectured
   %and graded for CS 250: Programming II.
 }
+\fi
+
+\section{Skills}
+\cvitemwithcomment{Programming Languages}{Python, C++, C, Shell, Java, PHP}{}
+\cvitemwithcomment{Platforms}{GNU/Linux, OSX, Android}{}
+\cvitemwithcomment{Software and Frameworks}{Maya, Nuke, Blender, Houdini,
+                   Django, OpenGL, CUDA}{}
 
 \ifonepage
 % nothing
@@ -134,12 +144,6 @@
 \cventry{2011--2012}{Publicity Chair}{ACM Student Chapter}{The University of Alabama}{}{}
 \cventry{2009--2012}{Member}{ACM Student Chapter}{The University of Alabama}{}{}
 \cventry{Summer 2010}{Volunteer}{The Good Samaritan Clinic}{}{}{}
-
-\section{Skills}
-\cvitemwithcomment{Programming Languages}{Python, C++, C, Shell, Java, PHP}{}
-\cvitemwithcomment{Platforms}{GNU/Linux, OSX, Android}{}
-\cvitemwithcomment{Software and Frameworks}{Maya, Nuke, Blender, Houdini,
-                   Django, OpenGL, CUDA}{}
 \fi
 
 \end{document}
